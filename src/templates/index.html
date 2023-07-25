@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RSS Feed</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>RSS Feed Entries</h1>
+        {% for date, entries in entries_by_date.items() %}
+            <h2>{{ date }}</h2>
+            <ul>
+                {% for entry in entries %}
+                    <li>
+                        <div class="article-content">
+                            <h3><a href="{{ entry.link }}">{{ entry.title }}</a></h3>
+                            <p>{{ entry.category }}</p>
+                        </div>
+                        <div class="article-image">
+                            {% if entry.image_url %}
+                                <img src="{{ entry.image_url }}" alt="Article Image">
+                            {% endif %}
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+</body>
+</html>

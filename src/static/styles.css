@@ -1,0 +1,64 @@
+/* static/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #2a2a2a;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #333;
+    display: flex; /* Use flexbox for two-column layout */
+}
+
+.article-content {
+    flex: 1; /* Fill the available space with the text section */
+    padding: 10px;
+}
+
+.article-image {
+    width: 200px; /* Set fixed width for the image column */
+    height: 150px; /* Set fixed height for the image column */
+    display: flex; /* Use flexbox for image positioning */
+    align-items: center; /* Center the image vertically */
+    background-color: black; /* Set a black background for sections without images */
+    padding: 10px; /* Add some padding to the black box */
+}
+
+.article-image img {
+    width: 100%; /* Make the image width 100% of the image column */
+    height: 100%; /* Make the image height 100% of the image column */
+    object-fit: cover; /* Preserve the aspect ratio and crop if necessary */
+    border: 1px solid #666
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+p {
+    margin: 5px 0;
+    color: #ccc;
+}
